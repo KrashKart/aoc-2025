@@ -1,5 +1,11 @@
 import time
 
+LRUD = [0 + 1j, 0 - 1j, 1, -1]
+LRUD_D: list[complex] = [-1 + 1j, -1 - 1j, -1, 0 + 1j, 0 - 1j, 1 + 1j, 1, 1 - 1j]
+
+def inBounds(i, j, mini, maxi, minj, maxj):
+    return mini <= i < maxi and minj <= j < maxj
+
 def readFile(day: int, splitOn: str = "", isTest: bool = False, toList: bool = True) -> list[str]:
     res = []
     filename = f"day-{day:02}.txt" if not isTest else f"day-{day:02}_test.txt"
