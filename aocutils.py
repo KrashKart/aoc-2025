@@ -8,7 +8,7 @@ def inBounds(i, j, mini, maxi, minj, maxj):
 
 def readFile(day: int, splitOn: str = "", isTest: bool = False, toStrip: bool = True, toList: bool = True) -> list[str]:
     res = []
-    filename = f"day-{day:02}.txt" if not isTest else f"day-{day:02}_test.txt"
+    filename = f"txts/day-{day:02}.txt" if not isTest else f"txts/day-{day:02}_test.txt"
     with open(filename, "r") as f:
         for line in f:
             if toStrip:
