@@ -6,20 +6,25 @@ LRUD_D: list[complex] = [-1 + 1j, -1 - 1j, -1, 0 + 1j, 0 - 1j, 1 + 1j, 1, 1 - 1j
 def inBounds(i, j, mini, maxi, minj, maxj):
     return mini <= i < maxi and minj <= j < maxj
 
-def readFile(day: int, splitOn: str = "", isTest: bool = False, toList: bool = True) -> list[str]:
+def readFile(day: int, splitOn: str = "", isTest: bool = False, toStrip: bool = True, toList: bool = True) -> list[str]:
     res = []
     filename = f"day-{day:02}.txt" if not isTest else f"day-{day:02}_test.txt"
     with open(filename, "r") as f:
         for line in f:
-            line = line.strip()
+            if toStrip:
+                line = line.strip()
             if splitOn:
-                line = line.split(splitOn)
+                if splitOn == r"\w":
+                    line = line.split()
+                else:
+                    line = line.split(splitOn)
             if toList:
                 line = list(line)
             res.append(line)
     return res
 
 def timeFunction(func):
+
     def wrapper(*args, **kwargs):
         startTime = time.time()
         res = func(*args, **kwargs)
