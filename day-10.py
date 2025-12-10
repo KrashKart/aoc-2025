@@ -33,6 +33,7 @@ def main():
         one += bfs(start, desired, buttons)
 
         ## heavily adapted this part from reddit
+        ## because I have no idea about how to use linprog
         costs = tuple(1 for _ in buttons)
         joltages = eval(line[-1][1:-1])
         eqs = tuple(tuple(i in b for b in buttons) for i in range(len(joltages)))

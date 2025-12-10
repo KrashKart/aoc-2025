@@ -8,6 +8,7 @@ def main():
     lines = readFile(9, splitOn=",", toList=False, isTest=t)
     lines = list(map(lambda x: tuple(map(int, x)), lines))
 
+    ## shapely idea came from Reddit!
     p = Polygon(lines)
     for i in range(len(lines) - 1):
         a = lines[i]
