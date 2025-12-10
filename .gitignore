@@ -5,6 +5,7 @@ __pycache__/
 *.txt
 txts/
 .vscode/
+aoc2025/
 
 # C extensions
 *.so

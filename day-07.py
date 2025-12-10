@@ -1,4 +1,4 @@
-from aocutils import readFile, timeFunction, printParts, LRUD_D, inBounds
+from aocutils import readFile, timeFunction, printParts
 
 @timeFunction
 def main():
