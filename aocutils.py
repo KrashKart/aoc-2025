@@ -24,11 +24,10 @@ def readFile(day: int, splitOn: str = "", isTest: bool = False, toStrip: bool = 
     return res
 
 def timeFunction(func):
-
     def wrapper(*args, **kwargs):
         startTime = time.time()
         res = func(*args, **kwargs)
-        print(f"Time taken: {time.time() - startTime}")
+        print(f"Time taken ({func.__name__}): {time.time() - startTime}")
         return res
     return wrapper
 

@@ -18,3 +18,5 @@ This is my 3rd year participating and I'm bummed that there's only 12 problems t
 8. [**Playground**](https://adventofcode.com/2025/day/8) ( :star: :star: )
 9. [**Movie Theater**](https://adventofcode.com/2025/day/9) ( :star: :star: )
 10. [**Factory**](https://adventofcode.com/2025/day/10) ( :star: :star: )
+11. [**Reactor**](https://adventofcode.com/2025/day/11) ( :star: :star: )
+10. [**Christmas Tree Farm**](https://adventofcode.com/2025/day/12) ( :star: , only 1 star available for this day)
